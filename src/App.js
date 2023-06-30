@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Components/Layout/Layout.jsx'
 import Home from './Components/Home/Home.jsx'
 import Register from './Components/Register/Register.jsx'
@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path='/' element={<Layout />}>
               <Route index element={<ProtectedRoute><Home /></ProtectedRoute>} />
@@ -35,7 +35,7 @@ export default function App() {
               <Route path='login' element={<InverseProtected><Login /></InverseProtected>} />
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </>
   )
 }
