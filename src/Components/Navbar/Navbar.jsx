@@ -32,14 +32,14 @@ export default function Navbar() {
       >
         <Link to={`/`} className='py-3 text-decoration-none text-white fs-5 d-block bg-dark'>
           <div className='d-flex align-items-center justify-content-center'>
-            <i class="fa-regular fa-note-sticky text-info fs-2 me-2"></i>
+            <i className="fa-regular fa-note-sticky text-info fs-2 me-2"></i>
             <h2 className='text-white fs-4 m-0'>Notes</h2>
           </div>
         </Link>
         <hr className='m-0 text-white' />
-        <ul class="navbar-nav bg-dark h-100">
-          <li class="nav-item">
-            <Link class="nav-link text-white py-3" to="/">
+        <ul className="navbar-nav bg-dark h-100">
+          <li className="nav-item">
+            <Link className="nav-link text-white py-3" to="/">
               <Form className="d-flex">
                 <Form.Control
                   type="search"
@@ -51,9 +51,9 @@ export default function Navbar() {
               </Form>
             </Link>
           </li>
-          <li class="nav-item">
-            <Link class="nav-link text-white py-3" to="movies">
-              <i class="fa-solid fa-arrow-right-from-bracket me-2"></i> Logout
+          <li className="nav-item">
+            <Link className="nav-link text-white py-3" onClick={() => dispatch(logout())} to="movies">
+              <i className="fa-solid fa-arrow-right-from-bracket me-2"></i> Logout
             </Link>
           </li>
         </ul>
@@ -71,14 +71,14 @@ export default function Navbar() {
             </IconButton>
             <Link className="navbar-brand text-primary" to="/">
               <div className='d-flex align-items-center '>
-                <i class="fa-regular fa-note-sticky text-info fs-2 me-2"></i>
+                <i className="fa-regular fa-note-sticky text-info fs-2 me-2"></i>
                 <h2 className='text-white fs-4 m-0'>Notes</h2>
               </div>
             </Link>
             <div className='d-none d-sm-block w-100 ms-4'>
               <div className='d-flex justify-content-between'>
-                <ul class="navbar-nav flex-row">
-                  <li class="nav-item">
+                <ul className="navbar-nav flex-row">
+                  <li className="nav-item">
                     <Form className="d-flex">
                       <Form.Control
                         type="search"
@@ -92,10 +92,10 @@ export default function Navbar() {
 
 
                 </ul>
-                <ul class="navbar-nav flex-row">
-                  <li class="nav-item">
-                    <Link onClick={() => dispatch(logout())} class="nav-link text-white mx-1" to="login">
-                      <i class="fa-solid fa-arrow-right-from-bracket me-2"></i> Logout
+                <ul className="navbar-nav flex-row">
+                  <li className="nav-item">
+                    <Link onClick={() => dispatch(logout())} className="nav-link text-white mx-1" to="login">
+                      <i className="fa-solid fa-arrow-right-from-bracket me-2"></i> Logout
                     </Link>
                   </li>
                 </ul>
