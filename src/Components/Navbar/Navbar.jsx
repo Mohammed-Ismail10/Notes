@@ -52,7 +52,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white py-3" onClick={() => dispatch(logout())} to="movies">
+            <Link className="nav-link text-white py-3" onClick={() => dispatch(logout())} to="login">
               <i className="fa-solid fa-arrow-right-from-bracket me-2"></i> Logout
             </Link>
           </li>

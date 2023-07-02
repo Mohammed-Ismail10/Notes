@@ -17,9 +17,7 @@ export default function FormikForm() {
 
   async function submit(values) {
     dispatch(loadingTrue());
-    console.log(values);
     let { payload } = await dispatch(signupPost(values));
-    console.log(payload);
     if (payload.message === 'success') {
       navigate('/login');
       toast.success('Sign up success');
